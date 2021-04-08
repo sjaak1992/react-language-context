@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import content from '../../data/content.json';
+import {LanguageSetting} from "../../Context/LanguageContext";
 
 function AllPlants() {
+    const {activeLanguage} = useContext(LanguageSetting);
   return (
     <div className="page-container">
       <h2>{content.nl.plants.title}</h2>
